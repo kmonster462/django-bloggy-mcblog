@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from api.serializers import UserSerializer, GroupSerializer
+from api.serializers import UserSerializer, GroupSerializer, PostSerializer, CategorySerializer
+from blogging.models import Post, Category
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -17,4 +18,22 @@ class GroupViewSet(viewsets.ModelViewSet):
     API endpoint that allows groups to be viewed or edited.
     """
     queryset = Group.objects.all()
-    serializer_class = GroupSerializer# Create your views here.
+    serializer_class = GroupSerializer
+
+
+class PostViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Posts to be viewed or edited.
+    """
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Catogories to be viewed or edited.
+    """
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
