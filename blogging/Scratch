@@ -1,0 +1,6 @@
+py230admin@Py230-Ubuntu009002:~/django-bloggy-mcblog$ sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+py230admin@Py230-Ubuntu009002:~/django-bloggy-mcblog$ sudo vi /etc/nginx/sites-available/default
+py230admin@Py230-Ubuntu009002:~/django-bloggy-mcblog$ export SECRET_KEY=“M4L@z{w=SAspVs”^”
+py230admin@Py230-Ubuntu009002:~/django-bloggy-mcblog$ export DJANGO_SETTINGS_MODULE='mysite.production'
+py230admin@Py230-Ubuntu009002:~/django-bloggy-mcblog$ export DATABASE_URL=""
+py230admin@Py230-Ubuntu009002:~/django-bloggy-mcblog$ export ALLOWED_HOSTS=py230-ubuntu009002.westus.cloudapp.azure.com
